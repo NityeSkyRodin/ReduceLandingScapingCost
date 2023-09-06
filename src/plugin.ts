@@ -3,9 +3,9 @@
 import { startup } from "./startup";
 
 registerPlugin({
-	name: "ReduceLandingScapingCost",
+	name: "Name of your plugin",
 	version: "1.0",
-	authors: [ "NityeSky_Rodin" ],
+	authors: [ "Your name" ],
 	type: "remote",
 	licence: "MIT",
 	/**

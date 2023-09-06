@@ -1,32 +1,20 @@
-let cost = 0;
+function onClickMenuItem()
+{
+	// Write code here that should happen when the player clicks the menu item under the map icon.
 
-function onClickMenuItem() {
-    console.log("cost == " + cost);
+	console.log("Hello world!");
 }
 
-export function startup() {
-    // Write code here that should happen on startup of the plugin.
 
-    // Register a menu item under the map icon:
-    if (typeof ui !== "undefined") {
-        ui.registerMenuItem("ReduceLandingScapingCost", () => onClickMenuItem());
-    }
+export function startup()
+{
+	// Write code here that should happen on startup of the plugin.
 
-    context.subscribe("action.execute", function (e) {
-        if (e.action == "landraise" || e.action == "landlower") {
-            // Set the cost to 0 for land raising and lowering actions.
-            console.log("i come here EXEC");
-            e.result.cost = 0;
-            console.log(e.result);
-        }
-    });
 
-    context.subscribe("action.query", function (e) {
-        if (e.action == "landraise" || e.action == "landlower") {
-            // Set the cost to 0 for land raising and lowering actions.
-            console.log("i come here QUERY");
-            e.result.cost = 0;
-            console.log(e.result);
-        }
-    });
+
+	// Register a menu item under the map icon:
+	if (typeof ui !== "undefined")
+	{
+		ui.registerMenuItem("My plugin", () => onClickMenuItem());
+	}
 }
