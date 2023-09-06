@@ -15,6 +15,6 @@ export function startup()
 	// Register a menu item under the map icon:
 	if (typeof ui !== "undefined")
 	{
-		ui.registerMenuItem("My plugin", () => onClickMenuItem());
+		ui.registerMenuItem("My plugin", () => onClickMenuItem()); 
 	}
 }
